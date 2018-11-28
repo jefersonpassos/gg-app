@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-12 col-sm-12 col-md-4 col-lg-6">
+            <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow>
+                    <ul class="uk-slideshow-items">
+                        <li *ngFor="let image of product.media">
+                            <img src="{{mediaPath + image.path}}" alt="" uk-cover>
+                        </li>
+                    </ul>
+        
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+        
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-8 col-lg-6">
+            <h1><span>{{product.id}}</span>{{product.title}}</h1>
+            <p>{{product.description}}</p>
+            <p>Data de criação: {{product.created_at}}</p>
+            <p class="valor">R${{product.price}}</p>
+            <p class="quantidade">Quantidade{{product.amount}}</p>
+        </div>
+  
+    </div>
+</div>

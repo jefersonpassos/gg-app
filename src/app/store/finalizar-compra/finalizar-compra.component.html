@@ -1,0 +1,53 @@
+<ion-content padding>
+    <div class="uk-padding ">
+        <div class="uk-card uk-card-default uk-card-body card-finaliza">
+            <h2>Finalizar Compra</h2>
+
+            <form>
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <h3>Dados de entrega</h3>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <input class="uk-input" value="{{user.name}}" type="text" placeholder="nome" name="nome">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <input class="uk-input" value="{{user.street}}" type="text" placeholder="rua" name="rua">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <input class="uk-input" value="{{user.cep}}" type="text" placeholder="cep" name="cep">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <input class="uk-input" value="{{user.city}}" type="text" placeholder="cidade" name="cidade">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <input class="uk-input" value="{{user.state}}" type="text" placeholder="estado" name="estado">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <input class="uk-input" value="{{user.phone}}" type="text" placeholder="telefone" name="telefone">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <h3>Forma de pagamento</h3>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <select class="uk-select" name="ageCategory">
+                            <option value="boleto">Boleto</option>
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Master card</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="valor">Total dos Produtos: <span>R$ {{totalValue}}</span></p>
+                    <p class="valor">Frete: <span>R$ {{frete}}</span></p>
+                    <p class="valor-total">Valor total: <span>R$ {{totalValue + frete}}</span></p>
+                </div>
+
+            </form>
+            <button (click)="finishSale()" type="button" class="uk-button uk-button-default uk-align-righ btn-finaliza">Finalziar</button>
+        </div>
+    </div>
+</ion-content>

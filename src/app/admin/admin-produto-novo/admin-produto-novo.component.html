@@ -1,0 +1,74 @@
+<div class="container">
+  <h1>Novo Produto</h1>
+
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4">
+        <input class="uk-input" type="text" placeholder="Nome" formControlName="title">
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <input class="uk-input" type="Number" placeholder="Preço" formControlName="price">
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <input class="uk-input" type="text" placeholder="Slug" formControlName="slug">
+      </div>
+      <div class="col-12 col-md-6 col-lg-6">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-12">
+            <div uk-form-custom="target: true" class="input-file">
+              <input type="file" multiple formControlName="images" class="input-file" (change)="detectFiles($event)">
+              <input class="uk-input input-file" type="text" placeholder="Selecione imagens" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div  class="col-12 col-md-12 col-lg-12">
+            <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow>
+              <ul class="uk-slideshow-items">
+                  <li *ngFor="let url of urls">
+                      <img src="{{url}}" alt="" uk-cover>
+                  </li>
+              </ul>
+              <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+              <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-12 col-md-6 col-lg-6">
+        <select class="uk-select" formControlName="ageCategory" placeholder="Classificação">
+          <option value="livre">livre</option>
+          <option value="7">7</option>
+          <option value="12">12</option>
+          <option value="16">16</option>
+          <option value="18">18</option>
+        </select>
+      </div>    
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4">
+          <input class="uk-input" type="Number" placeholder="Quantidade" formControlName="amount">
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+          <input class="uk-input" type="Number" placeholder="Desconto a vista" formControlName="cashDiscount">
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+          <input class="uk-input" type="Number" placeholder="Parcelas" formControlName="parcel">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-12">
+        <textarea class="uk-textarea" rows="5" placeholder="Descrição do produto" formControlName="description"></textarea>
+      </div>
+    </div>
+    <button type="submit" class="uk-button uk-button-default uk-align-right">Adicionar</button>
+
+  </form>
+
+</div>

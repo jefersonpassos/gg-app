@@ -1,0 +1,50 @@
+@import '../../../variables';
+
+.products {
+    margin: 0 2%;
+}
+
+.row {
+    max-width: 105%;
+}
+
+.uk-slideshow-items {
+    img {
+        border-radius: 1.5rem 1.5rem 0 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .products {
+        margin-bottom: 4rem;
+    }
+}
+
+.uk-card {
+    @include border-radius(1.5rem);
+
+    transition: all 0.5s ease;
+    transition-property: border-radius;
+}
+
+.no-border {
+    @include border-radius(0rem);
+}
+
+.uk-card-body {
+    background: $color-blue-4;
+    color: $color-light;
+
+    .uk-card-title {
+        color: $color-grey-1;
+    }
+}
+.products {
+    h3{
+        font-size: 18px;
+    }
+
+    .uk-card-body{
+        min-height: 10rem;
+    }
+} 

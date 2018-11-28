@@ -1,0 +1,66 @@
+<div class="uk-padding">
+  <table class="uk-table uk-table-striped">
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Valor Total</th>
+              <th>Valor Frete</th>
+              <th>Cliente</th>
+              <th>Status</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>{{sale.id}}</td>
+              <td>R$ {{sale.total_value}}</td>
+              <td>R$ {{sale.frete_value}}</td>
+              <td>{{sale.user.name}}</td>
+              <td>Pendente</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+<div class="uk-padding uk-padding-remove-top">
+  <table class="uk-table uk-table-striped">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>CPF</th>
+              <th>Rua</th>
+              <th>Estado</th>
+              <th>Cidade</th>
+              <th>CEP</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>{{sale.user.name}}</td>
+              <td>{{sale.user.cpf}}</td>
+              <td>{{sale.user.street}}</td>
+              <td>{{sale.user.state}}</td>
+              <td>{{sale.user.city}}</td>
+              <td>{{sale.user.cep}}</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+<div class="uk-padding uk-padding-remove-top">
+  <table class="uk-table uk-table-striped">
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Preço</th>
+              <th>Quantidade</th>
+          </tr>
+      </thead>
+      <tbody >
+          <tr *ngFor="let product of sale.products">
+              <td>{{product.id}}</td>
+              <td>{{product.title}}</td>
+              <td>{{product.price}}</td>
+              <td>{{product.pivot.amount}}</td>
+          </tr>
+      </tbody>
+  </table>
+</div>

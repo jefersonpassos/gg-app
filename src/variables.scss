@@ -1,0 +1,22 @@
+
+$color-dark: #070807;
+$color-light: #F2F2F2;
+$color-green: #09B257;
+
+$color-blue-1: #009B90;
+$color-blue-2: #006BA8;
+$color-blue-3: #203CA8;
+$color-blue-4: #101F40;
+
+$color-grey-1: #E3E0E3;
+$color-grey-2: #A3A1A3;
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+
+    transition: all 2s eqase;
+    transition-property: border-radius, margin-left, margin-right, padding-right, -webkit-border-radius;
+  }

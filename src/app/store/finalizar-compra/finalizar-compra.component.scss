@@ -1,0 +1,51 @@
+.row{
+    margin: 20px 0;
+}
+
+.card-finaliza{
+    margin: 0 0 35px 0;
+}
+
+.card-finaliza input{
+    margin:0 0 15px 0;
+}
+
+.card-finaliza .valor{
+    font-size: 18px;
+    text-align: left;
+}
+.card-finaliza .valor span{
+    float: right;
+    font-size: 20px;
+    color: #029905;
+}
+
+.card-finaliza .valor-total{
+    font-size: 18px;
+    margin: 50px 0;
+    text-align: left;
+    text-transform: uppercase;
+}
+.card-finaliza .valor-total span{
+    float: right;
+    font-size: 25px;
+    color: #1e87f0;
+}
+
+.btn-finaliza{
+    text-transform: uppercase;
+    background: #029905;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 40px;
+    transition: 0.5s;
+    border: solid 2px #fff;
+    float: right;
+}
+.btn-finaliza:hover {
+    background: #fff;
+    color: #029905;
+    border: solid 2px #029905;
+    text-decoration: none;
+    transition: 0.5s;
+  }

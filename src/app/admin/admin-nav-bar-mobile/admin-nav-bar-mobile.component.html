@@ -1,0 +1,27 @@
+<nav class="uk-navbar-container menu-mobile" uk-navbar>
+    <div class="uk-navbar-left">
+  
+        <ul class="uk-navbar-nav">
+            <li class="uk-active"><a routerLink="/admin"><span uk-icon="icon: home"></span></a></li>
+            <li>
+                <a routerLink="/admin/produtos"><span uk-icon="icon: cart"></span></a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li routerLinkActive="active"><a routerLink="/admin/produtos/novo"><span uk-icon="icon: plus"></span>Novo Produto</a></li>
+                        <li routerLinkActive="active"><a routerLink="/admin/produtos"><span uk-icon="icon: list"></span>Listar Produtos</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+              <a href="#"><span uk-icon="icon: user"></span></a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><a href="#"><span uk-icon="icon: plus"></span></a></li>
+                    <li><a href="#"><span uk-icon="icon: users"></span></a></li>
+                </ul>
+            </div>
+            </li>
+        </ul>
+  
+    </div>
+  </nav>

@@ -1,0 +1,17 @@
+  <nav class="uk-navbar-container menu-desktop" uk-sticky="bottom: #offset" uk-navbar>
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+          true}" class="buttom-menu">
+          <a routerLink="/" >Inicio</a>
+        </li>
+        <li routerLinkActive="active" class="uk-parent buttom-menu">
+          <a routerLink="/produtos" >Produtos</a>
+        </li>
+        <li  routerLinkActive="active" class="buttom-menu">
+          <a routerLink="/carrinho"><span uk-icon="cart"></span><span class="uk-badge" *ngIf="+carrinhoCount > 0">{{carrinhoCount}}</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+

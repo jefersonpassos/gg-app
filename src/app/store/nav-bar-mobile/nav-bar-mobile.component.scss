@@ -1,0 +1,23 @@
+@import '../../../variables.scss';
+
+.menu-mobile{
+    position: fixed;
+    bottom: 0;
+    min-width: 100%;
+    z-index: 9;
+    display: none;
+}
+.uk-navbar-container {
+    background: $color-dark !important;
+}
+
+.uk-navbar-nav {
+    justify-content: center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-mobile{
+        display: block;
+    }
+}

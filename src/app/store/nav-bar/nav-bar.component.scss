@@ -1,0 +1,56 @@
+@import '../../../variables.scss';
+
+
+.uk-navbar-container {
+    @include border-radius(1rem);
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-right: 1rem;
+    transition: all 0.3s ease-out;
+}
+
+nav {
+    border-bottom: 0rem !important;
+}
+
+.uk-sticky-fixed {
+    @include border-radius(0rem);
+    margin-left: 0rem;
+    margin-right: 0rem;
+    padding-right: 0rem;
+    width: 100% !important;
+    transition: all 0.3s ease-in;
+    transition-property: border-radius, margin-left, margin-right, padding-right, position, display;
+}
+
+.buttom-menu {
+    border-bottom: 0.2rem solid $color-blue-2 !important;
+    transition: all 0.3s ease;
+    transition-property: border-width, border-color;
+
+    &:hover {
+        border-bottom: 0.4rem solid $color-green !important;
+        a {
+            color: $color-light !important;
+        }
+    }
+     
+}
+
+.active {
+    border-bottom: 0.4rem solid $color-blue-1 !important;
+    a {
+        color: $color-light !important;
+    }
+}
+
+.uk-navbar-container {
+    background: $color-dark !important;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .menu-desktop{
+        display: none;
+    }
+}

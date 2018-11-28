@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+   <h1>Produtos</h1>
+ 
+      <table class="uk-table uk-table-striped uk-table-hover">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th>Valor</th>
+                  <th>Quantidade</th>
+                  <th>Ação</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let product of products">
+                  <td routerLink="{{product.id}}">{{product.id}}</td>
+                  <td routerLink="{{product.id}}">{{product.title}}</td>
+                  <td routerLink="{{product.id}}">R${{product.price}}</td>
+                  <td routerLink="{{product.id}}">{{product.amount}}</td>
+                  <td><button>test</button></td>
+              </tr>
+          </tbody>
+      </table>
+
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="uk-padding">
+  <table class="uk-table uk-table-striped">
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Valor Total</th>
+              <th>Valor Frete</th>
+              <th>Cliente</th>
+              <th>Status</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let sale of sales">
+              <td><a routerLink="{{sale.id}}">{{sale.id}}</a></td>
+              <td>R${{sale.total_value}}</td>
+              <td>R${{sale.frete_value}}</td>
+              <td>{{sale.user.name}}</td>
+              <td>Pendente</td>
+          </tr>
+      </tbody>
+  </table>
+</div>

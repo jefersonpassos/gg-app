@@ -1,0 +1,40 @@
+<ion-content padding>
+<div class="uk-child-width-expand@s uk-padding ">
+        <div class="uk-card uk-card-default uk-card-body">
+            <div *ngFor="let product of products">
+                <div class="box-produto">
+                    <div class="row">
+                        <div class="col-12 col-sm-8 col-md-5 col-lg-5">
+                            <img src="{{mediaPath + product.media[0].path}}" alt="{{product.title}}" title="{{product.title}}"
+                                uk-img>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-5 col-lg-5">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <h3><a class="uk-link-reset" routerLink="/produtos/{{product.id}}">{{product.title}}</a></h3>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                <p>R${{product.price}}</p>
+                                <p><span title="quantidade">quantidade:</span>{{amountSelected[product.id]}}</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-2 col-lg-2 flex-mid">
+                            <button class="uk-button uk-button-primary" (click)="removeProduct(product)">Excluir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-card uk-card-default uk-card-body card-valor-total">
+            <div>
+                <p>Total dos Produtos: <span>R${{totalValue}}</span></p>
+            </div>
+            <div>
+                <p>Frete: <span>R${{freteValue}}</span></p>
+            </div>
+            <div class="v-total">
+                <p>Valor Total: <span>R${{totalValue + freteValue}}</span></p>
+                <div class="float-left"><a class="btn-finalizar-compra" routerLink="/finalizar-compra">Finalizar compra</a></div>
+            </div>
+        </div>
+    </div>
+</ion-content>
